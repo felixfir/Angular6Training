@@ -1,0 +1,4 @@
+npm start
+
+npm install -g angular-cli
+ng new curso-angular6
