@@ -1,4 +1,4 @@
-npm start
+npm start /*ó*/ ng serve /*to start the server*/
 
 npm install -g angular-cli
 ng new curso-angular6
