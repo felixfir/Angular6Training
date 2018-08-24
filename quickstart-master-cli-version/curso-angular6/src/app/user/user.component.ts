@@ -33,10 +33,14 @@ export class UserComponent{
     public user:User;
 
     constructor(){
-        this.user = new User('Félix',23,'Software Engineer',true);
+        this.user = new User('Félix',30,'Software Engineer',true);
     }
 
     ngOnInit(){
         console.log(this.user);
+    }
+
+    changeAge(value){
+        this.user.age = value;
     }
 }

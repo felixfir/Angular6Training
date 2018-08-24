@@ -3,7 +3,7 @@ At html file:
 <p>Félix</p>
 <p>Soraya</p-->
 <strong>User</strong>
-<ul>
+<ul *ngIf="user.age >= 30">
     <li>
         {{user.name}}
     </li>
@@ -17,3 +17,5 @@ At html file:
         {{user.job}}
     </li>
 </ul>
+<button (click)="changeAge(25)">Don´t Show User</button>
+<button (click)="changeAge(30)">Show User</button>
