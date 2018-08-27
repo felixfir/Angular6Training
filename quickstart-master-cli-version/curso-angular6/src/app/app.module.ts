@@ -8,11 +8,14 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { HomeComponent } from './home/home.component';
 
+import { ConversorPipe } from './pipes/conversor.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    HomeComponent
+    HomeComponent,
+    ConversorPipe
   ],
   imports: [
     BrowserModule,
