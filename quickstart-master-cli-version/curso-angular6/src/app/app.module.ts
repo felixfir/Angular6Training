@@ -7,6 +7,7 @@ import { routing, appRoutingProviders } from './app.routing';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { HomeComponent } from './home/home.component';
+import { InsertComponent } from './insert/insert.component';
 
 import { ConversorPipe } from './pipes/conversor.pipe';
 
@@ -15,6 +16,7 @@ import { ConversorPipe } from './pipes/conversor.pipe';
     AppComponent,
     UserComponent,
     HomeComponent,
+    InsertComponent,
     ConversorPipe
   ],
   imports: [

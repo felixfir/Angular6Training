@@ -21,3 +21,27 @@ At html file:
 <button (click)="changeAge(30)">Show User</button>
 <hr>
 {{parameter}}
+
+<hr>
+<h1>Form</h1>
+<form #formCoche="ngForm" (ngSubmit)="onSubmit()">
+    <p>
+        <label>Name: </label>
+        <input type="text" name="name" #name="ngModel" [(ngModel)]="user.name" required>
+    </p>
+    <p>
+        <label>Age: </label>
+        <input type="number" name="age" #age="ngModel" [(ngModel)]="user.age" required>
+    </p>
+    <p>
+        <label>Job: </label>
+        <input type="text" name="job" #job="ngModel" [(ngModel)]="user.job" required>
+    </p>
+    <p>
+        <label>Hired: </label>
+        <input type="checkbox" name="hired" #hired="ngModel" [(ngModel)]="user.hired" required>
+    </p>
+    <p>
+        <input type="submit" value="Save">
+    </p>
+</form>

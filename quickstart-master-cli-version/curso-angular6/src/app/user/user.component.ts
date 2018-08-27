@@ -51,4 +51,8 @@ export class UserComponent{
     changeAge(value){
         this.user.age = value;
     }
+
+    onSubmit(){
+        console.log(this.user);
+    }
 }
