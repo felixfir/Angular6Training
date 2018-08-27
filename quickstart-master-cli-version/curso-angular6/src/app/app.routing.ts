@@ -9,6 +9,7 @@ const appRoutes: Routes = [
     {path: '', component: HomeComponent}, /*Home Page*/
     {path: 'home', component: HomeComponent}, /*Home Page*/
     {path: 'user', component: UserComponent}, 
+    {path: 'user/:parameter', component: UserComponent}, 
     {path: '**', component: HomeComponent} /*When something goes wrong*/
 ];
 

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+
 import { User } from './user';
 
 @Component({
@@ -31,6 +33,9 @@ import { User } from './user';
 export class UserComponent{
     public componentName:string = 'Users';
     public user:User;
+    public parameter;
+    private _route: ActivatedRoute;
+    private _router: Router;
 
     constructor(){
         this.user = new User('Félix',30,'Software Engineer',true);
@@ -38,6 +43,9 @@ export class UserComponent{
 
     ngOnInit(){
         console.log(this.user);
+        this._route.params.forEach((params: Params) => {
+            this.parameter = params['parameter'];
+        });
     }
 
     changeAge(value){
