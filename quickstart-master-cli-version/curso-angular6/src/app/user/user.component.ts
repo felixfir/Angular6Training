@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
 import { User } from './user';
+import { RequestService } from '../services/request.service';
 
 @Component({
     selector: 'user',
-    templateUrl: './user.component.html'
+    templateUrl: './user.component.html',
+    providers: [RequestService]
 })
 
 /*export class UserComponent{
@@ -34,18 +36,30 @@ export class UserComponent{
     public componentName:string = 'Users';
     public user:User;
     public parameter;
+    public products;
     private _route: ActivatedRoute;
     private _router: Router;
 
-    constructor(){
+    constructor(
+        private _requestService: RequestService
+    ){
         this.user = new User('Félix',30,'Software Engineer',true);
     }
 
     ngOnInit(){
-        console.log(this.user);
-        this._route.params.forEach((params: Params) => {
+        this._requestService.getProducts().subscribe(
+            result =>{
+                console.log(result);
+                this.products = result;
+            },
+            error => {
+                var errorMessage = <any> error;
+                console.log("del error" + errorMessage);
+            }
+        );
+        /*this._route.params.forEach((params: Params) => {
             this.parameter = params['parameter'];
-        });
+        });*/
     }
 
     changeAge(value){

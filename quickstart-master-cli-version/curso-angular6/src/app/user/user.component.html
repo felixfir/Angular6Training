@@ -45,3 +45,11 @@ At html file:
         <input type="submit" value="Save">
     </p>
 </form>
+<hr>
+<h1>User List</h1>
+<ul *ngIf="products">
+    <li *ngFor="let product of products">
+        {{product.id}} - {{product.title}}
+    </li>
+    <span *ngIf="!products">Loading data...</span>
+</ul>
