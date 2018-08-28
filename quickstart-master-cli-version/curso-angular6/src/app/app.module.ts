@@ -10,12 +10,14 @@ import { HomeComponent } from './home/home.component';
 import { InsertComponent } from './insert/insert.component';
 
 import { ConversorPipe } from './pipes/conversor.pipe';
+import { ThemeComponent } from './themes/theme.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     HomeComponent,
+    ThemeComponent,
     InsertComponent,
     ConversorPipe
   ],

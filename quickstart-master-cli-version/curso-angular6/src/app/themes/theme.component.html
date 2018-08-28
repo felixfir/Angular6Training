@@ -1,0 +1,21 @@
+<h1>{{title}}</h1>
+<!--
+<div *ngIf="admin">
+    <strong style="background: yellow;">You are admin</strong>
+</div>
+
+<div *ngIf="!admin">
+    <strong style="background: red;color:white;">You are not admin</strong>
+</div>
+-->
+
+<div *ngIf="admin; then admin1 else noAdmin">
+</div>
+
+<ng-template #admin1>
+    <strong style="background: yellow;">You are admin</strong>
+</ng-template>
+
+<ng-template #noAdmin>
+    <strong style="background: red;color:white;">You are not admin</strong>
+</ng-template>
