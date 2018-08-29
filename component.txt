@@ -1,0 +1,47 @@
+export class TestComponent {
+
+  public file:any;
+  public parameter1: string;
+  public parameter2: string;
+  public parameter3: string;
+
+  doProcess(){
+    let uimap = new Array();
+  }
+
+  fileChanged(e) {
+    this.file = e.target.files[0];
+  }
+
+  uploadDocument(file) {
+    let fileReader = new FileReader();
+    let array1 = new Array();
+    let array3 = new Array();
+
+    /*array3[0] = new Array('Félix','Soraya');
+    array3[1] = new Array('Raymundo','Sandra');*/
+
+    console.log(array3);
+    fileReader.onload = (e) => {
+      
+
+      //console.log(fileReader.result);
+
+      let array2: any = fileReader.result;
+
+      console.log(array2);
+      array1 = array2.split('\n').map(function(ln){
+        return ln.split('\t');
+      });
+
+      for(let i = 0; i < array1.length;i++){
+        console.log(i + ' ' + array1[i]);
+        array3[i] = new Array(array1[i].substring);
+      }
+
+      
+
+    }
+    fileReader.readAsText(this.file);
+  }
+}
