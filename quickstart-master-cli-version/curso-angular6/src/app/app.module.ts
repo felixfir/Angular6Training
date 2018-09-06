@@ -12,6 +12,8 @@ import { InsertComponent } from './insert/insert.component';
 import { ConversorPipe } from './pipes/conversor.pipe';
 import { ThemeComponent } from './themes/theme.component';
 
+import { TreeModule } from 'ng2-tree';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +27,7 @@ import { ThemeComponent } from './themes/theme.component';
     BrowserModule,
     FormsModule,
     HttpModule,
+    TreeModule,
     routing
   ],
   providers: [appRoutingProviders],
